@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+            <meta name='viewport' content="width=device-width initial-scale=1.0">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+            {% load static %}
+            <link rel="stylesheet" href="{% static 'my_app/css/styles.css' %}" media="screen" title="Welcome" charset="UTF-8">
+            <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">   
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Buena Vista Properties</title>
+    </head>
+    <body>
+                <div class="top col-md-12">
+                    
+                </div>
+                
+                <div class=" dashCont col-md-12">
+                        <div class="EnglishHeader  col-md-12 col-sm-12">
+                                <nav class="navbar navbar-default col-md-12 " role="navigation">
+                                <div class="navbarLeft col-md-12 ">
+                                        <a class="btn btn-md btn-success" href="/englishDash">
+                                        <i class="fa fa-flag fa-1x pull-left"></i> Click here for English</a>
+                                        <a class="btn btn-md btn-success" href="/spanishDash">
+                                        <i class="fa fa-flag fa-1x pull-left"></i> Click here for Spanish</a>   
+                                        <a class="btn btn-md btn-danger" href="/logOut">
+                                        <i class="fa fa-flag fa-1x pull-left"></i> Logout</a>   
+                                </div>
+                                </nav>
+                        </div>
+                        <div class="topBorder"   >
+                                <h2 id="welcomeLetter">Welcome to Buena Vista Properties, {{user.first_name}}</h2>                          
+                        </div>
+    
+                <div class= "WelcomeContainer col-md-12" >
+            
+                     <!-- <div class="dashBox1 col-md-4" >
+                            <a href='/englishDash'><button id="button" >Click here for English</button> </a> 
+                                <button id="homeSearch"><a href="http://buenavista.idxhome.com/homesearch/112321"  target="_blank" >Search sold homes</a> </button>
+                                http://buenavista.idxhome.com/site/listing/search/advanced/112321
+                        </div> -->
+                
+                    <!-- <div class="Links col-md-4"  >
+                            
+                                <a class="btn btn-lg btn-success" href="/englishDash">
+                                <i class="fa fa-flag fa-2x pull-left"></i> Click here for English</a>        
+                            <a href='/spanishDash'><button id="button" >Presione Para Español</button></a>
+                    </div> -->
+                
+                    <!-- <div class=" dashBox2 col-md-4  " >  
+                            <a href='/logOut'><button id="button" >Click here to logout </button></a>    
+                    </div> -->
+                </div>
+            
+
+            <div class="bigBox col-md-12" >
+                    
+            </div>
+          </div>
+            <div class="bottomBorder col-md-12">
+                <h4 id="footerText">&copyCopyright 2017 | Buena Vista Properties</h4>  
+                        
+            </div>
+                  
+    </div>
+
+
+
+            
+</body>
+</html>  

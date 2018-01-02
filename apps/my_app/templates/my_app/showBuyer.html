@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>    
+                <meta charset="utf-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                <!-- Bootstrap CSS -->
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+                <!-- <meta name='viewport' content="width=device-width initial-scale=1.0">
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous"> -->
+                {% load static %}
+                <link rel="stylesheet" href="{% static 'my_app/css/styles.css' %}" media="screen" title="Welcome" charset="UTF-8">
+                <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">   
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>Buena Vista Properties</title>
+        </head>
+        <body>
+                <div class="conatainer-fluid" >
+                        <div class="top col-md-12">
+                                <h2 id="Letter">{{user.first_name}}'s Finances</h2><br>    
+                        </div>
+                        <div class="opacityPic col-md-12 " >
+                                <button><a href="/dashboard">Go Back Home</a></button>                 
+                                <button btn btn-lg btn-alert><a href='/logOut'>Click here to logout</a> </button>
+                                <div class="showBuyers col-md-12 ">
+                                        <h3 id="show">Buyer's Name: {{user.first_name}} {{ user.last_name}}<h3>
+                                        <h3 id="show" >Email: {{ user.email}}</h3>
+                                        <h3 id="show">Car Payment: {{ carPayment }}</h3>
+                                        <h3 id="show">Net Monthly Income: {{ newIncome }}</h3>                        
+                                        <h3 id="show">Downpayment Percentage: {{ percentage }}%</h3> 
+                                        <h3 id="show">Downpayment Amount: {{ downpayment }}</h3>                                          
+                                        <h3 id="show">CONGRATS! You Qualify For: <p id="green">{{ income }}</p></h3> <br> 
+                                        <a class="btn btn-lg btn-success" href="http://buenavista.idxhome.com/homesearch/112321" target="_blank" >
+                                        <i class="fa fa-flag fa-2x pull-left"></i> Find Your Dream Home</a>                                
+                                </div>        
+                        </div>
+        
+                        <div class= "footer col-md-12">
+                                <h4 id="footerText">&copyCopyright 2017 | Buena Vista Properties</h4>   
+                        </div>
+                </div>
+        </body>
+</html>  

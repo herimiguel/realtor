@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!-- <meta name='viewport' content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous"> -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'my_app/css/styles.css' %}" media="screen" title="Welcome" charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buena Vista Properties</title>
+</head>
+<body>
+<div class="conatainer-fluid" >
+    <div class="top col-md-12">
+        
+    </div>
+    <div class="container col-lg-12  col-md-12 col-sm-12">
+        <div class="holdLogo col-md-12">
+            <div class="box1 col-md-2" >
+            </div>
+            <div class="logo1 col-md-6" >
+                <img id="logo" src="{% static 'my_app/css/logo-big.jpg' %}" alt="">
+            </div>
+            <div class="box2 col-md-2" >
+            </div>
+        </div>
+    
+        <div class="logRegCont col-md-12">
+            <div class="middle  col-md-5 ">
+                        
+                <form action="login" method="post">
+                    {% csrf_token %}
+                    <h1 class="logReg">login</h1>
+                    <div class="form-group login">
+                        <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email" autofocus>
+                    </div>
+                    <div class="form-group login">
+                        <input type="password" class="form-control" name="password" id="password" aria-describedby="emailHelp" placeholder="Enter Password">
+                    </div>
+                    <button type="submit" name="login" class="btn btn-primary floatright login loginbtn">login</button>
+                </form>
+                <ul>
+                    {% for message in messages%}
+                    <li>   {{message}}     </li>
+                    {% endfor %}
+                </ul>
+        
+            </div>
+            <div class="middle1 col-md-5 ">
+    
+                <form action="register" method="post">
+                    {% csrf_token %}
+                    <h1 class="logReg">register</h1>
+                    <div class="form-group ">
+                        <input type="text" class="form-control" name="first_name" id="first_name" aria-describedby="emailHelp" placeholder="First Name">
+                    </div>
+                    <div class="form-group ">
+                        <input type="text" class="form-control" name="last_name" id="last_name" aria-describedby="emailHelp" placeholder="Last Name">
+                    </div>
+                    <div class="form-group ">
+                        <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div class="form-group ">
+                        <input type="password" class="form-control" name="password" id="password" aria-describedby="emailHelp" placeholder="Password">
+                    </div>
+                    <div class="form-group ">
+                        <input type="password" class="form-control" name="conPassword" id="conPassword" aria-describedby="emailHelp" placeholder="Confirm Password">
+                    </div>
+                    
+                    <button type="submit" name="register"  class="btn btn-primary floatright register registerbtn">Register</button>
+                    
+                    <!-- <button type="submit" class="btn btn-primary floatright login loginbtn">register</button> -->
+                </form>
+            </div>
+        </div>
+            
+        <div class="fillingBox col-md-12">
+        </div>
+          
+        <div class= "footer col-md-12">
+            
+           <h5 id="footerText">&copyCopyright 2017 | Buena Vista Properties | cell: 630-870-0138 | pemac01@yahoo.com | <a href="learn">Learn How to buy your Home </a></h5>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

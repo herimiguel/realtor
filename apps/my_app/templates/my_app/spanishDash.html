@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <!-- <meta name='viewport' content="width=device-width initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous"> -->
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'my_app/css/styles.css' %}" media="screen" title="Welcome" charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">   
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Buena Vista Properties</title>
+</head>
+<body>
+        <!-- <div class="topBorder">
+                <h2 id="Letter">{{user.first_name}}'s Finances</h2>                        
+        </div> -->
+        <div class="top col-md-12">
+                <!-- <a  class="navbar-brand" href="/dashboard">Go Back Home </a> -->                
+        </div>
+        <div class="backPic col-md-12" >
+            <div class="EnglishHeader  col-md-12 col-sm-12">
+            <nav class="navbar navbar-default col-md-12 " role="navigation">
+            <div class="navbarLeft col-md-12 " >
+                    <a  class="btn btn-lg btn-primary" href="/dashboard">
+                        <i class="fa fa-flag fa-1x pull-left"></i>Pagina Principal </a>
+                    <a class="btn btn-lg btn-danger" href="/logOut">
+                        <i class="fa fa-flag fa-1x pull-left"></i> Logout</a>
+
+                </div>
+                </nav>
+            </div>
+
+
+            <div class="SSForm col-md-6" > 
+                <!-- {% for message in messages%}
+        <li>   {{message}}     </li>
+        {% endfor %} -->
+                <div class="InfoSS">
+                <h3 id="financeL" > Prestamo FHA </h3>
+                <p>Requisitos: 3.5% down-payment</p>
+                <p>Credit Score: 580-640 <a id="CreditC" href="https://www.creditkarma.com/"  target="_blank" >Verifica tu Score</a></p>
+        
+                <form action="finance" method="POST">
+                    {% csrf_token %}
+                    <label for="income">Ingresos brutos (mensual):</label>
+                    <input type="number" name="income" placeholder="ingrese un numbero"><br>
+                    <label for="carPayment">Pago de Carro(mensual):</label>
+                    <input type="number" name="carPayment" placeholder="ingrese un numbero">
+                    <input type="hidden" value="3.5" name="downpayment">
+                    <br>
+                    <input class="btn btn-md btn-success" type="submit"  name="finance" value="calcular">
+                </form>
+                </div>    
+            </div>
+
+            <div class="SSForm col-md-6"> 
+
+                <div class="InfoSS">
+                <h3 id="financeL" >Convencional</h3>
+                <p>Requisitos: 5% down-payment</p>
+                <p>Credit Score: 680-740 <a id="CreditC" href="https://www.creditkarma.com/"  target="_blank" >Verifica tu Score</a></p>
+                <form action="finance" method="POST">
+                    {% csrf_token %}
+                    <label for="income">Ingresos brutos (mensual):</label>
+                    <input type="text" name="income" placeholder="ingrese un numbero"><br>
+                    <label for="carPayment">Pago de Carro(mensual):</label>
+                    <input type="text" name="carPayment" placeholder="ingrese un numbero">
+                    <input type="hidden" value="5" name="downpayment">
+                    <br>
+                    <input class="btn btn-md btn-success" type="submit"  name="finance" value="calcular">
+                </form>
+                </div>    
+            </div>
+            
+            <div class="ITNForm col-md-6 ">                               
+                <div class="InfoSS">
+                <h3 id="financeL">Prestamo con ITN</h3>
+                <p>Requisitos: 20% down-payment</p>
+                <p>Credit Score: 580-640 <a id="CreditC" href="https://www.creditkarma.com/"  target="_blank" >Verifica tu Score</a></p>
+            
+                <form action="finance" method="POST">
+                    {% csrf_token %}
+                    <label for="income">Ingresos brutos(mensual):</label>
+                    <input type="text" name="income" placeholder="ingrese un numbero"><br>
+                    <label for="carPayment">Pago de Carro(mensual):</label>
+                    <input type="text" name="carPayment" placeholder="ingrese un numbero">
+                    <input type="hidden" value="20" name="downpayment">                    
+                    <br>
+                <input class="btn btn-md btn-success" type="submit"  name="finance" value="calcular">
+                </form>
+                </div>    
+            </div>
+
+
+            <div class="ITNForm col-md-6 ">                         
+                <div class="InfoSS">
+                    <h3 id="financeL">Comprar en efectivo?</h3>
+                    <p>Requisitos: Email "Proof of Funds Letter" a Pedro Malca</p>
+                    <br>
+                    <div class="input-group margin-bottom-sm">
+                            <a class="btn btn-md btn-success" href="http://buenavista.idxhome.com/login/112321" target="_blank" >
+                                <i class="fa fa-flag fa-2x pull-left"></i> Sign Up para enviar Email</a>
+                            <!-- <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                            <input class="form-control" type="text" placeholder="pemac01@yahoo.com"> -->
+                    </div>
+                </div>    
+            </div>
+    
+            <div class= "footer col-md-12">
+                <h4 id="footerText">&copyCopyright 2017 | Buena Vista Properties</h4>   
+        </div>    
+
+    </div>  
+    
+    
+
+
+</body>
+</html>
